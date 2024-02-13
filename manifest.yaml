@@ -1,0 +1,10 @@
+applications:
+- name: ec2-pls-test
+  memory: 64M
+  instances: 1
+  path: ./
+  buildpacks:
+    - nodejs_buildpack
+  services:
+    - btp-privatelink-vpce
+  command: npm run start

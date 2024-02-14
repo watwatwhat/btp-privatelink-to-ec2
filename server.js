@@ -5,7 +5,7 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3030;
 
-// SAP Private Link Service のドメイン名を取得
+// バインドしたSAP Private Link Service エンドポイントのホスト名を取得
 const vcapServices = process.env.VCAP_SERVICES ? JSON.parse(process.env.VCAP_SERVICES) : null;
 let hostname = '';
 if (vcapServices) {
